@@ -3,10 +3,13 @@ require 'rubygems'
 require 'twitter/json_stream'
 require 'yaml'
 require 'json'
+require 'classify'
 
 
 cfg = YAML.load_file('config.yml')
 keywords = cfg['keywords'].join(',').downcase
+classify = Classify.new(cfg['keywords'])
+classify.train
 
 
 EventMachine::run do
@@ -18,18 +21,18 @@ EventMachine::run do
   )
 
   stream.each_item do |item|
-    $stdout.print "item: #{item}\n"
-    data = JSON.parse(item)
-    $stdout.print "#{data}\n"
-    $stdout.flush
+    data  = JSON.parse(item)
+    txt   = "#{data["user"]["screen_name"]} #{data["text"]}"
+    words = classify.results(txt)
+    puts "#{txt} --> #{words.join(' - ')}"
   end
 
   stream.on_error do |message|
-    $stderr.print "error: #{message}\n"
+    puts "error: #{message}"
   end
 
   stream.on_max_reconnects do |timeout, retries|
-    $stderr.print "Failed after #{retries} failed reconnects\n"
+    puts "Failed after #{retries} failed reconnects"
   end
 
   trap('TERM') do

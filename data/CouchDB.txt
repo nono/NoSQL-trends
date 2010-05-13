@@ -1,0 +1,5 @@
+sheysrebellion @jaaaarel incidentally, here are some CouchDB case studies http://bit.ly/bS3gJX
+tilgovi Sweet! -- Operating CouchDB - till's blog http://bit.ly/cx8w5I -- Nice Lounge mentions. Guess I should work on lode more.
+hkos xml import direct to couchdb: ~300s; import via REST to couchdb: ~1000s, and buggy. both slow. nice the REST import works in general, though
+al3xandru Will Leinweber presentations: Relaxing with CouchDB (video) and CouchDB, Ruby and You « myNoSQL http://j.mp/aXx6Uf
+dandean First GeoCouch is running in production at http://pdxapi.com/ (via @mikeal) Portland and CouchDB: both awesome.

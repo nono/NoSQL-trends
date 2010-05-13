@@ -1,0 +1,5 @@
+pr1001 RT @wkornewald: A working MongoDB backend for Django-nonrel is underway http://bit.ly/9zpwvC
+RafaelCorrales Dealing with our first "good crisis" -- so much traffic for our Mongoose release for @mongodb that it took our server completely down.
+rit This is really slick - Mongoose... a Javascript library to simplify working with MongoDB from within a Node.JS environment:
+jtkendall Back to figuring out MongoDB collections and how I need to code this app for a bit. Finishing the work day with Escape the Fate.
+rgaidot Mongoose: MongoDB ORM-like utility for Node.JS that makes async easy http://bit.ly/cKzNWi /via YCHackerNews #mongodb #nodejs

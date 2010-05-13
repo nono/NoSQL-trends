@@ -1,0 +1,5 @@
+jeremydmiller I think an overlooked advantage to the NoSQL stuff is how much time we'll save when relationships are cheap.
+BrianG_Jasper Part of the case for next-gen BI, including in-memory design and NoSQL support:  http://bit.ly/b15QFt - Information Mgmt article
+darcia Schemaless data modeling with #Bigtable and Groovy's Gaelyk http://bit.ly/9ZL2uT #java #nosql
+aaronbush Watching the future of DB2... sounds like lots of NoSQL mixed in with traditional SQL. Under one roof.
+d5andy got jaql hooked up to my hadoop cluster - now for some json #NOSQL magic

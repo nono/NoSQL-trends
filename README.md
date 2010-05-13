@@ -10,7 +10,7 @@ Install
 
     # aptitude install ruby rubygems
     # gem install rake eventmachine
-    # gem install twitter-stream json_pure
+    # gem install twitter-stream json_pure classifier
 
 
 See also

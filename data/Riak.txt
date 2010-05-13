@@ -1,0 +1,5 @@
+crucially Distributed filesystem using riak as it's backend store  http://bit.ly/9cTWXR
+technoweenie nice, riak filesystem using fuse: http://github.com/crucially/riakfuse
+lstoll @seancribbs That is sweet. How well suited is riak for file storage? Should the bitcask backend be used for that?
+jperras I like the 'unofficial' Riak motto: "Eventual consistency is no excuse for losing data".
+jimmythrasher loves that when I deploy another node with Riak it scales linearly without me being a Riak expert #riak
