@@ -1,0 +1,8 @@
+login: nosqltrends
+password: xxxxxx
+keywords:
+  - NoSQL
+  - CouchDB
+  - MongoDB
+  - Riak
+  - Neo4j
