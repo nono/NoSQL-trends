@@ -3,3 +3,5 @@ BrianG_Jasper Part of the case for next-gen BI, including in-memory design and N
 darcia Schemaless data modeling with #Bigtable and Groovy's Gaelyk http://bit.ly/9ZL2uT #java #nosql
 aaronbush Watching the future of DB2... sounds like lots of NoSQL mixed in with traditional SQL. Under one roof.
 d5andy got jaql hooked up to my hadoop cluster - now for some json #NOSQL magic
+stephenhay RT @codepo8 NoSQL is a term to describe structured storage that doesn't rely on SQL and is accessible. - that makes my sock drawer NoSQL
+abcoates @codepo8 It's a poorly defined term, but I think the real idea is that NoSQL DBs should scale better across clouds/grids than relational DBs

@@ -1,5 +1,7 @@
 login: nosqltrends
 password: xxxxxx
+retweet: false
+mongodb: trends
 keywords:
   - NoSQL
   - CouchDB

@@ -3,3 +3,7 @@ RafaelCorrales Dealing with our first "good crisis" -- so much traffic for our M
 rit This is really slick - Mongoose... a Javascript library to simplify working with MongoDB from within a Node.JS environment:
 jtkendall Back to figuring out MongoDB collections and how I need to code this app for a bit. Finishing the work day with Escape the Fate.
 rgaidot Mongoose: MongoDB ORM-like utility for Node.JS that makes async easy http://bit.ly/cKzNWi /via YCHackerNews #mongodb #nodejs
+aemkei I love the concept of server side code execution in MongoDB. Simply pass JavaScript to filter your data: http://bit.ly/cjk0y5 #nosql
+mitchitized Talking to some smart folks about a loose schema definition for dynamic admin interfaces to #mongodb - looks extremely promising.
+phelo @chrislea awesome talk, just staring a new project now and you've convinced me to switch to mongo! #nosql #fowa
+salvadorgascon RT @scottgu: This is a nice blog post from Shiju that demonstrates using a NoSQL approach with ASP.NET MVC and MongoDB: http://bit.ly/bql5JP
