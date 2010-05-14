@@ -8,9 +8,10 @@ function of the number of their tweets.
 Install
 -------
 
-    # aptitude install ruby rubygems
+    # aptitude install ruby rubygems mongodb
     # gem install rake eventmachine
     # gem install twitter-stream json_pure classifier
+    # gem install em-mongo
 
 
 See also
