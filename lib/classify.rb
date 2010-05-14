@@ -19,7 +19,7 @@ class Classify
   def initialize(keywords)
     @classifiers = {}
     keywords.each do |kw|
-      @classifiers[kw] = Classifier::Bayes.new(kw, negate(kw))
+      @classifiers[kw] = Classifier::Bayes.new(negate(kw), kw)
     end
   end
 

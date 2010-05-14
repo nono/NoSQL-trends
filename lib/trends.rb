@@ -5,6 +5,10 @@ require "tweet"
 require "yaml"
 
 
+# Trends is the core of this application.
+# It manages the interaction between the twitter stream,
+# the classifier and the Mongo database.
+#
 class Trends
   def initialize(config_file)
     @config_file = config_file
@@ -32,10 +36,10 @@ class Trends
     )
 
     @stream.each_item do |item|
-      tweet = Tweet.new(item)
+      tweet = Tweet.from_stream(item)
       tweet.keywords = @classify.results(tweet.to_s)
-      puts "#{tweet} --> #{tweet.keywords.join(' - ')}"
       tweet.save
+      puts "#{tweet} --> #{tweet.keywords.join(' - ')}"
     end
 
     @stream.on_error { |msg| puts "error: #{msg}" }

@@ -11,7 +11,7 @@ Install
     # aptitude install ruby rubygems mongodb
     # gem install rake eventmachine
     # gem install twitter-stream json_pure classifier
-    # gem install em-mongo
+    # gem install bson_ext em-mongo
 
 
 See also
