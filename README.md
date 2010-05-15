@@ -4,6 +4,20 @@ NoSQL trends
 NoSQL trends is a web site that graphs the popularity of NoSQL databases in
 function of the number of their tweets.
 
+**Keywords**: Ruby, Eventmachine, Twitter Stream, OAuth, MongoDB, map/Reduce,
+Bayes Classification, Thin, Mustache, Git, and more :-)
+
+
+TODO
+----
+
+* show THE graph
+* twitter widget
+* nginx vhost
+* use the tweets from Mongo from the training
+* complete the NoSQL databases list
+* moderation interface
+
 
 Install
 -------
@@ -13,11 +27,16 @@ Install
     # gem install twitter-stream classifier mustache
     # gem install bson_ext em-mongo oauth em-http-request
 
+Adding the good index in MongoDB:
+
+    $ mongo trends
+    > db.tweets.ensureIndex( {created_at: 1} )
 
 See also
 --------
 
-* [git repository](http://github.com/nono/NoSQL-trends)
+* [Git repository](http://github.com/nono/NoSQL-trends)
+* [Twitter account](http://twitter.com/nosqltrends)
 
 
 Copyright

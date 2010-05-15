@@ -36,6 +36,7 @@ class Tweet
     tweet
   end
 
+  # Retweet it on twitter
   def retweet
     return false unless Tweet.credentials["retweet"]
     url = "http://api.twitter.com/1/statuses/retweet/#{@id}.json"
