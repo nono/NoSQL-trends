@@ -19,14 +19,14 @@ class Trends
 
   def reload
     cfg = YAML.load_file(@config_file)
-    @port     = cfg["port"]
-    @login    = cfg["login"]
-    @password = cfg["password"]
-    @retweet  = cfg["retweet"]
+    @port     = cfg["web"]["port"]
+    @login    = cfg["twitter"]["login"]
+    @password = cfg["twitter"]["password"]
     @keywords = cfg["keywords"]
     @database = cfg["mongodb"]
     @classify = Classify.new(@keywords)
     @classify.train
+    Tweet.credentials = cfg["twitter"]
   end
 
   def twitter_stream
@@ -41,6 +41,7 @@ class Trends
     @stream.each_item do |item|
       tweet = Tweet.from_stream(item)
       tweet.keywords = @classify.results(tweet.to_s)
+      tweet.retweet unless tweet.keywords.empty?
       tweet.save
       puts "#{tweet} --> #{tweet.keywords.join(' - ')}"
     end

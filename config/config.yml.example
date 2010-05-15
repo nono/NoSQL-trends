@@ -1,7 +1,13 @@
-port: 3000
-login: nosqltrends
-password: xxxxxx
-retweet: false
+web:
+  port: 3000
+twitter:
+  login: nosqltrends
+  password: xxxxxx
+  retweet: true
+  consumer_key: xxx
+  consumer_secret: xxx
+  access_token: xxx
+  access_token_secret: xxx
 mongodb: trends
 keywords:
   - NoSQL
