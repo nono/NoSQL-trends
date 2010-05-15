@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>NoSQL Trends</title>
+  <link rel="stylesheet" href="{{stylesheet}}" />
+  <link rel="icon" type="image/x-icon" href="{{favicon}}" />
+  <meta name="author" content="Bruno Michel" />
+  <meta name="description" content="Get the latest trends for the NoSQL databases from twitter" />
+  <meta name="keywords" content="trends, {{keywords}}" />
+</head>
+<body>
+  <h1>NoSQL Trends</h1>
+  <ul>
+  {{#tweets}}
+    <li>@{{user}}: {{text}}</li>
+  {{/tweets}}
+  </ul>
+</body>
+</html>

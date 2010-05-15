@@ -6,6 +6,7 @@ EventMachine::run do
   trends = Trends.new(ARGV[0] || "config/config.yml")
   trends.twitter_stream
   trends.mongo
+  trends.web
 
   trap('HUP') do
     reload

@@ -27,10 +27,11 @@ class Tweet
   # Save this tweet to MongoDB
   def save
     Tweet.collection.insert(
-      :tweet_id => @id,
-      :user     => @user,
-      :text     => @text,
-      :keywords => @keywords
+      :tweet_id   => @id,
+      :user       => @user,
+      :text       => @text,
+      :keywords   => @keywords,
+      :created_at => Date.today.to_s
     )
   end
 

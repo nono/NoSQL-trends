@@ -1,8 +1,10 @@
+require "yaml"
+require "thin"
+require "tweet"
 require "twitter/json_stream"
 require "em-mongo"
 require "classify"
-require "tweet"
-require "yaml"
+require "web_adapter"
 
 
 # Trends is the core of this application.
@@ -17,6 +19,7 @@ class Trends
 
   def reload
     cfg = YAML.load_file(@config_file)
+    @port     = cfg["port"]
     @login    = cfg["login"]
     @password = cfg["password"]
     @retweet  = cfg["retweet"]
@@ -48,7 +51,17 @@ class Trends
 
   def mongo
     db = EM::Mongo::Connection.new.db(@database)
-    Tweet.collection = db.collection('tweets')
+    WebAdapter.collection = Tweet.collection = db.collection('tweets')
+  end
+
+  def web
+    WebAdapter.keywords = @keywords
+    Thin::Server.start('127.0.0.1', @port) do
+      use Rack::CommonLogger
+      map '/' do
+        run WebAdapter.new
+      end
+    end
   end
 
   def stop

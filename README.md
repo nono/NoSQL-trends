@@ -9,9 +9,9 @@ Install
 -------
 
     # aptitude install ruby rubygems mongodb
-    # gem install rake eventmachine
+    # gem install rake eventmachine thin
     # gem install twitter-stream json_pure classifier
-    # gem install bson_ext em-mongo
+    # gem install bson_ext em-mongo mustache
 
 
 See also
